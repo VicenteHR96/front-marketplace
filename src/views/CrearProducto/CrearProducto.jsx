@@ -14,7 +14,7 @@ import {
   TextField,
 } from "@mui/material";
 
-const CrearProducto = () => {
+const CrearProducto = ({ closeModal }) => {
   // const [idCategoria, setIdCategoria] = useState(null);
   const {
     registrarProducto,
@@ -95,6 +95,9 @@ const CrearProducto = () => {
       id_usuario,
       id_categoria
     );
+    {
+      closeModal();
+    }
   };
 
   const handleChange = (event) => {

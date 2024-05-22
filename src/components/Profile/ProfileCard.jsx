@@ -166,7 +166,9 @@ export default function ProfileCard(props) {
       {crearProductoOpen && (
         <Modal
           closeModal={() => setCrearProductoOpen(false)}
-          contenido={<CrearProducto />}
+          contenido={
+            <CrearProducto closeModal={() => setCrearProductoOpen(false)} />
+          }
         />
       )}
     </Card>
