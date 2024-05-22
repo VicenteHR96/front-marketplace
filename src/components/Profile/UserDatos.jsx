@@ -72,6 +72,7 @@ const UserDatos = (props) => {
 
     // Llama a la función para actualizar los datos del usuario
     if (edit.disabled) {
+      const currentAvatar = userProfile.avatar;
       try {
         await updateUserData({
           id_usuario: userProfile.id_usuario,
@@ -80,6 +81,7 @@ const UserDatos = (props) => {
           telefono: user.phone,
           id_sexo: user.gender,
           pass: user.pass,
+          avatar: currentAvatar,
         });
         console.log("user: ", user);
       } catch (error) {
