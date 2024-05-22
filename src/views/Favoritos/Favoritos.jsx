@@ -20,6 +20,10 @@ const Favoritos = () => {
     }
   }, [pizzas]);
 
+  const likedPizzas = pizzas.filter((pizza) =>
+    likesUser.some((like) => like.id_producto === pizza.id)
+  );
+
   return (
     <div className="py-5">
       <div className="w-100 mb-4 text-center">
@@ -46,8 +50,8 @@ const Favoritos = () => {
         </div>
       ) : (
         <div className="gallery">
-          {likesUser.map((p) => {
-            return <ProductCard pizza={p} key={p.id_producto}></ProductCard>;
+          {likedPizzas.map((p) => {
+            return <ProductCard pizza={p} key={p.id}></ProductCard>;
           })}
         </div>
       )}
