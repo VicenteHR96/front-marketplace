@@ -21,7 +21,7 @@ const Favoritos = () => {
   }, [pizzas]);
 
   return (
-    <div className="p-5">
+    <div className="py-5">
       <div className="w-100 mb-4 text-center">
         <h2>Mis favoritos</h2>
       </div>
