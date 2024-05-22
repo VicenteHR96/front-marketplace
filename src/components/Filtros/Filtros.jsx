@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useContext } from "react";
-
 import {
   FormControl,
   FormControlLabel,
@@ -21,8 +20,10 @@ const Filtros = ({
   initialCategory,
   orderBy,
   setOrderBy,
+  onSearchChange,
 }) => {
   const [selectedCategories, setSelectedCategories] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     if (initialCategory) {
@@ -33,6 +34,10 @@ const Filtros = ({
   useEffect(() => {
     onCategorySelect(selectedCategories);
   }, [selectedCategories, onCategorySelect]);
+
+  useEffect(() => {
+    onSearchChange(searchTerm);
+  }, [searchTerm, onSearchChange]);
 
   const handleCategoryChange = (event) => {
     const category = event.target.value;
@@ -53,9 +58,11 @@ const Filtros = ({
   return (
     <Stack spacing={1} style={{ width: "85%" }} className="filterInput">
       <FormControl variant="standard">
-        <InputLabel htmlFor="standard-adornment-password">Buscar...</InputLabel>
+        <InputLabel htmlFor="standard-adornment-search">Buscar...</InputLabel>
         <Input
-          id="standard-adornment-password"
+          id="standard-adornment-search"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
           endAdornment={
             <InputAdornment position="end">
               <SearchIcon />

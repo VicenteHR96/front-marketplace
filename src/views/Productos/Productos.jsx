@@ -8,6 +8,7 @@ const Productos = () => {
   const location = useLocation();
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [orderBy, setOrderBy] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
   const { pizzas, getData, orderProducts } = useContext(PizzaContext);
 
   useEffect(() => {
@@ -24,10 +25,22 @@ const Productos = () => {
     setSelectedCategory(categories.length === 1 ? categories[0] : null);
   };
 
-  // Filtrar pizzas por categoría seleccionada
-  const filteredPizzas = selectedCategory
-    ? pizzas.filter((pizza) => pizza.categoria === selectedCategory)
-    : pizzas;
+  const handleSearchChange = (term) => {
+    setSearchTerm(term); // Update search term state
+  };
+
+  const filteredPizzas = pizzas.filter((pizza) => {
+    const matchesCategory = selectedCategory
+      ? pizza.categoria === selectedCategory
+      : true;
+    const matchesSearchTerm =
+      pizza.nombre_producto.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      pizza.descripcion_corta
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase()) ||
+      pizza.precio.toString().includes(searchTerm);
+    return matchesCategory && matchesSearchTerm;
+  });
 
   const orderedPizzas = orderProducts(filteredPizzas, orderBy);
 
@@ -40,6 +53,7 @@ const Productos = () => {
           initialCategory={selectedCategory}
           orderBy={orderBy}
           setOrderBy={setOrderBy}
+          onSearchChange={handleSearchChange}
         />
       </section>
       <section>
