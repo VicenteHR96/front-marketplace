@@ -151,6 +151,7 @@ export default function ProductCard({ pizza }) {
             variant="body2"
             color="text.secondary"
             className="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
+            style={{ padding: "16px", display: "flex", alignItems: "center" }}
           >
             {`$${pizza.precio}`}
           </Typography>
