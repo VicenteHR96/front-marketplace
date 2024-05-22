@@ -233,6 +233,37 @@ const PizzaContextProvider = ({ children }) => {
     }
   };
 
+  //Ordenar productos
+
+  const orderProducts = (products, orderBy) => {
+    const collator = new Intl.Collator("es", { sensitivity: "base" });
+
+    switch (orderBy) {
+      case "name-asc":
+        return products.slice().sort((a, b) => {
+          const nameA = a.nombre_producto || "";
+          const nameB = b.nombre_producto || "";
+          return collator.compare(nameA, nameB);
+        });
+      case "name-desc":
+        return products.slice().sort((a, b) => {
+          const nameA = a.nombre_producto || "";
+          const nameB = b.nombre_producto || "";
+          return collator.compare(nameB, nameA);
+        });
+      case "price-asc":
+        return products
+          .slice()
+          .sort((a, b) => (a.precio || 0) - (b.precio || 0));
+      case "price-desc":
+        return products
+          .slice()
+          .sort((a, b) => (b.precio || 0) - (a.precio || 0));
+      default:
+        return products;
+    }
+  };
+
   return (
     <PizzaContext.Provider
       value={{
@@ -245,6 +276,7 @@ const PizzaContextProvider = ({ children }) => {
         totalPages,
         getProductDetails,
         registrarProducto,
+        orderProducts,
         getUserData,
         //Datos de usuario
         userData,

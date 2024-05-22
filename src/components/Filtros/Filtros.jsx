@@ -16,9 +16,12 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 import { PizzaContext } from "../../contexts/PizzaContext";
 
-const Filtros = ({ onCategorySelect, initialCategory }) => {
-  const { getCategoryProduct } = useContext(PizzaContext);
-  const [orderBy, setOrderBy] = useState("");
+const Filtros = ({
+  onCategorySelect,
+  initialCategory,
+  orderBy,
+  setOrderBy,
+}) => {
   const [selectedCategories, setSelectedCategories] = useState([]);
 
   useEffect(() => {
@@ -43,7 +46,8 @@ const Filtros = ({ onCategorySelect, initialCategory }) => {
   };
 
   const handleChange = (event) => {
-    setOrderBy(event.target.value);
+    const value = event.target.value;
+    setOrderBy(value);
   };
 
   return (

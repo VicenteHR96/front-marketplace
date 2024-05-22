@@ -7,7 +7,8 @@ import { PizzaContext } from "../../contexts/PizzaContext.jsx";
 const Productos = () => {
   const location = useLocation();
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const { pizzas, getData } = useContext(PizzaContext);
+  const [orderBy, setOrderBy] = useState("");
+  const { pizzas, getData, orderProducts } = useContext(PizzaContext);
 
   useEffect(() => {
     if (location.state && location.state.selectedCategory) {
@@ -28,6 +29,8 @@ const Productos = () => {
     ? pizzas.filter((pizza) => pizza.categoria === selectedCategory)
     : pizzas;
 
+  const orderedPizzas = orderProducts(filteredPizzas, orderBy);
+
   return (
     <div className="productos">
       <section className="filtros px-4 mt-4 d-flex flex-column align-items-center mb-5">
@@ -35,10 +38,12 @@ const Productos = () => {
         <Filtros
           onCategorySelect={handleCategorySelect}
           initialCategory={selectedCategory}
+          orderBy={orderBy}
+          setOrderBy={setOrderBy}
         />
       </section>
       <section>
-        <Gallery pizzas={filteredPizzas} />
+        <Gallery pizzas={orderedPizzas} />
       </section>
     </div>
   );
