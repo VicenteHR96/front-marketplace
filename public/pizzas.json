@@ -1,0 +1,50 @@
+[
+  {
+    "desc": "Estos shorts Nike están diseñados para brindarte comodidad y libertad de movimiento durante tus entrenamientos o actividades deportivas. Confeccionados con telas transpirables y livianas, te mantendrán fresco y seco. Cuentan con un corte atlético y ajustable en la cintura para un ajuste personalizado. Además, incluyen bolsillos laterales para guardar tus pertenencias esenciales.",
+    "id": "P001",
+    "img": "https://sumerlabs.com/sumer-app-90b8f.appspot.com/product_photos%2F67cd49890ad071e58fb17479afed2987%2Ffa732ac0-a666-11ed-9b9a-79f347c040f1?alt=media&token=2749bab2-ebb2-469e-bf91-ec1af0ef3e84",
+    "ingredients": ["mozzarella", "tomates", "jamón", "orégano"],
+    "name": "shorts Nike",
+    "price": 5950
+  },
+  {
+    "desc": "La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña.",
+    "id": "P002",
+    "img": "https://www.wankun.cl/cdn/shop/files/portadawankun-video_2048x.jpg?v=1613733822",
+    "ingredients": ["mozzarella", "tomates", "jamón", "choricillo"],
+    "name": "Wankün Dog Food",
+    "price": 7250
+  },
+  {
+    "desc": "La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña.",
+    "id": "P003",
+    "img": "https://www2.hm.com/content/dam/hm-magazine-2023/october_2023/3078/3078-3x2-3-magazine.jpg",
+    "ingredients": ["mozzarella", "tomates", "salame", "orégano"],
+    "name": "Parka Guess Hombre",
+    "price": 5990
+  },
+  {
+    "desc": "La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña.",
+    "id": "P004",
+    "img": "https://images.squarespace-cdn.com/content/v1/624b15eaed90eb4638ead49d/1fef9d86-9ee0-47d8-95e4-12f3a834904d/adidas_header.jpeg",
+    "ingredients": ["mozzarella", "salame", "aceitunas", "champiñones"],
+    "name": "Adidas F180",
+    "price": 9590
+  },
+  {
+    "desc": "La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña.",
+    "id": "P005",
+    "img": "https://ovacen.com/wp-content/uploads/2019/09/casa-gatos-lana.jpg",
+    "ingredients": ["mozzarella", "tomates cherry", "bacon", "orégano"],
+    "name": "Iglús para gatos",
+    "price": 6450
+  },
+  {
+    "desc": "La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña.",
+    "id": "P006",
+    "img": "https://images.ecestaticos.com/hcBkn-8XBXl4AcEcrn-uoAfHqi0=/1x1:1799x1349/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F20d%2Ff0d%2F513%2F20df0d5139ae4a8703d87f4fbde6bd96.jpg",
+    "ingredients": ["mozzarella", "pimientos", "pollo grillé", "orégano"],
+    "name": "Blusa Floreada",
+    "price": 8500
+  }
+]
